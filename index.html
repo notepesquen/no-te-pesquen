@@ -505,7 +505,7 @@ footer strong{color:var(--red);font-family:'Bebas Neue',sans-serif;letter-spacin
       <ul class="alert-list">
         <li>Fiscalía o comisaría más cercana</li>
         <li>UFECI (Unidad Fiscal de Ciberdelincuencia): <a href="https://www.mpf.gob.ar/ufeci/" target="_blank" style="color:var(--yellow)">mpf.gob.ar/ufeci</a> — Tel: (011) 5071-0040 / Email: denunciasufeci@mpf.gov.ar</li>
-        <li>Defensa del Consumidor: 0800 333 3339</li>
+        <li>Defensa del Consumidor: <strong style="color:var(--yellow)">0800-666-1518</strong> / TINA WhatsApp: <strong style="color:var(--yellow)">+54 11 3910-1010</strong> — <a href="https://www.argentina.gob.ar/defensadelconsumidor" target="_blank" style="color:var(--yellow)">argentina.gob.ar/defensadelconsumidor</a></li>
         <li>BCRA (fraudes financieros con bancos o tarjetas): <a href="https://www.bcra.gob.ar/realizar-un-reclamo-ante-el-banco-central-por-fraude-o-estafa/" target="_blank" style="color:var(--yellow)">bcra.gob.ar/reclamos</a></li>
       </ul>
     </div>
@@ -618,6 +618,67 @@ footer strong{color:var(--red);font-family:'Bebas Neue',sans-serif;letter-spacin
     </div>
 </div>
 
+
+<!-- GLOSARIO -->
+<div id="page-glosario" style="display:none">
+</div>
+
+<div style="background:var(--bg2);border-top:1px solid var(--border);padding:2rem 1.5rem;max-width:800px;margin:0 auto">
+  <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:0.5rem 0" onclick="toggleGlosario()">
+    <div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:0.25rem">Diccionario</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:2px;color:var(--white)">GLOSARIO — EN CRIOLLO</div>
+    </div>
+    <div id="glosario-icon" style="font-size:1.5rem;color:var(--red);transition:transform 0.3s;font-weight:700">＋</div>
+  </div>
+  <div id="glosario-body" style="display:none;margin-top:1rem">
+    <p style="font-size:0.9rem;color:var(--gray);margin-bottom:1.25rem;line-height:1.6">Palabras que aparecen en el curso, explicadas sin vueltas.</p>
+    <div style="display:flex;flex-direction:column;gap:0.75rem">
+
+      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
+        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Phishing</div>
+        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Mensaje trucho — por mail, SMS o WhatsApp — que intenta robarte datos haciéndose pasar por una empresa o persona de confianza.</div>
+      </div>
+
+      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
+        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">URL / Link</div>
+        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">La dirección de una página web. Por ejemplo: <span style="color:var(--yellow);font-weight:600">anses.gob.ar</span> es la URL oficial de ANSES.</div>
+      </div>
+
+      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
+        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Dominio</div>
+        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">La parte más importante de una URL. En <span style="color:var(--yellow);font-weight:600">www.anses.gob.ar/turnos</span>, lo que importa es <span style="color:var(--yellow);font-weight:600">anses.gob.ar</span>. Si esa parte es rara o distinta, el sitio puede ser falso.</div>
+      </div>
+
+      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
+        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Remitente</div>
+        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Quién supuestamente mandó el mensaje. En un mail, es la dirección que aparece en el campo "De:" — y puede ser falsa aunque parezca real.</div>
+      </div>
+
+      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
+        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Patrocinado</div>
+        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Resultado pago en Google. Aparece primero porque alguien pagó para estar ahí — puede ser legítimo o una trampa. No confíes solo porque aparece primero.</div>
+      </div>
+
+      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
+        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Código de verificación</div>
+        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Número que llega por SMS o WhatsApp para confirmar que sos vos. <strong style="color:var(--white)">Nunca se comparte con nadie</strong>, ni con quien diga ser del banco, de WhatsApp o de cualquier empresa.</div>
+      </div>
+
+      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
+        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Filtración de datos</div>
+        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Cuando los datos de muchas personas (mails, contraseñas, números) quedaron expuestos en internet por un hackeo a alguna empresa o servicio que usabas.</div>
+      </div>
+
+      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
+        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Verificación en dos pasos</div>
+        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Una segunda llave para entrar a tu cuenta. Además de la contraseña, el sistema te pide confirmar tu identidad con un código al celular. Hace mucho más difícil que alguien entre aunque tenga tu contraseña.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <footer>
   <strong>NO TE PESQUEN</strong> · Curso gratuito sobre estafas online · Argentina 2025<br>
   <span style="margin-top:0.5rem;display:block">Contenido educativo sin fines comerciales</span>
@@ -635,6 +696,20 @@ function toggleMenu(){
 function closeMenu(){
   document.getElementById('nav-links').classList.remove('open');
 }
+
+function toggleGlosario() {
+  var body = document.getElementById('glosario-body');
+  var icon = document.getElementById('glosario-icon');
+  if (body.style.display === 'none') {
+    body.style.display = 'block';
+    icon.textContent = '－';
+    icon.style.transform = 'rotate(0deg)';
+  } else {
+    body.style.display = 'none';
+    icon.textContent = '＋';
+  }
+}
+
 </script>
 </body>
 </html>
