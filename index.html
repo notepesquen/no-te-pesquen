@@ -160,12 +160,142 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.97);backdrop-fi
 /* FOOTER */
 footer{border-top:1px solid rgba(255,255,255,0.04);padding:2rem 1.5rem;text-align:center;font-size:0.88rem;color:var(--gray);letter-spacing:0.5px}
 footer strong{color:var(--red);font-family:'Bebas Neue',sans-serif;letter-spacing:2px;font-size:0.9rem}
+
+<style>
+/* MODO ACCESIBLE */
+body.modo-accesible {
+  font-size: 22px !important;
+  line-height: 1.9 !important;
+}
+
+body.modo-accesible .intro-text,
+body.modo-accesible .alert-list li,
+body.modo-accesible .rule-list li,
+body.modo-accesible .content-block p,
+body.modo-accesible .module-desc,
+body.modo-accesible .tool-desc,
+body.modo-accesible .step-text,
+body.modo-accesible .highlight-box p {
+  font-size: 1.15rem !important;
+  line-height: 2 !important;
+}
+
+body.modo-accesible .module-title {
+  font-size: 1.3rem !important;
+}
+
+body.modo-accesible .content-block h3 {
+  font-size: 1rem !important;
+  letter-spacing: 1px !important;
+}
+
+body.modo-accesible .nav-links a {
+  font-size: 1rem !important;
+}
+
+body.modo-accesible .tool-name {
+  font-size: 1.1rem !important;
+}
+
+body.modo-accesible .tool-url {
+  font-size: 0.95rem !important;
+}
+
+body.modo-accesible .contacts-table td {
+  font-size: 1.05rem !important;
+  padding: 1rem 0.5rem !important;
+}
+
+body.modo-accesible .quiz-btn {
+  font-size: 1.3rem !important;
+  padding: 1.4rem 2rem !important;
+  min-height: 56px !important;
+}
+
+body.modo-accesible .back-btn {
+  font-size: 1rem !important;
+  min-height: 50px !important;
+}
+
+body.modo-accesible .module-cta {
+  font-size: 0.95rem !important;
+  padding: 14px 20px !important;
+  min-height: 50px !important;
+}
+
+body.modo-accesible .alert-list li::before {
+  font-size: 1rem !important;
+  margin-top: 4px !important;
+}
+
+body.modo-accesible .rule-list li .rule-num {
+  font-size: 1.4rem !important;
+  width: 26px !important;
+}
+
+body.modo-accesible .protocol-step .step-num {
+  font-size: 2.4rem !important;
+}
+
+body.modo-accesible .protocol-step .step-text {
+  font-size: 1.05rem !important;
+}
+
+body.modo-accesible .hero-sub {
+  font-size: 1.15rem !important;
+}
+
+body.modo-accesible .alert-banner {
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+}
+
+body.modo-accesible footer {
+  font-size: 1rem !important;
+}
+
+body.modo-accesible #btn-accesibilidad {
+  background: var(--red) !important;
+  color: white !important;
+  border-color: var(--red) !important;
+}
+
+/* Glosario en modo accesible */
+body.modo-accesible #glosario-body div[style*="font-size:0.95rem"] {
+  font-size: 1.1rem !important;
+  line-height: 1.9 !important;
+}
+
+body.modo-accesible div[style*="font-size:0.82rem"],
+body.modo-accesible div[style*="font-size:0.88rem"],
+body.modo-accesible div[style*="font-size:0.9rem"],
+body.modo-accesible div[style*="font-size:0.95rem"] {
+  font-size: 1.05rem !important;
+  line-height: 1.9 !important;
+}
+</style>
+
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-brand" onclick="showPage('home')">NO TE <span>PESQUEN</span></div>
+  <button onclick="toggleAccesibilidad()" id="btn-accesibilidad" style="
+    background:none;
+    border:1px solid rgba(255,75,43,0.4);
+    color:var(--gray);
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:0.5px;
+    padding:6px 12px;
+    cursor:pointer;
+    border-radius:2px;
+    white-space:nowrap;
+    min-height:44px;
+    transition:all 0.2s;
+    flex-shrink:0;
+  " title="Aumentar tamaño de letra">𝐀+ Letra grande</button>
   <div class="hamburger" onclick="toggleMenu()" id="hamburger">
     <span></span><span></span><span></span>
   </div>
@@ -753,6 +883,30 @@ function toggleMenu(){
 }
 function closeMenu(){
   document.getElementById('nav-links').classList.remove('open');
+}
+
+
+function toggleAccesibilidad() {
+  var body = document.body;
+  var btn = document.getElementById('btn-accesibilidad');
+  if (body.classList.contains('modo-accesible')) {
+    body.classList.remove('modo-accesible');
+    btn.textContent = '𝐀+ Letra grande';
+    localStorage.setItem('accesibilidad', 'off');
+  } else {
+    body.classList.add('modo-accesible');
+    btn.textContent = '𝐀− Letra normal';
+    localStorage.setItem('accesibilidad', 'on');
+  }
+}
+
+// Recordar preferencia entre páginas/visitas
+if (localStorage.getItem('accesibilidad') === 'on') {
+  document.body.classList.add('modo-accesible');
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('btn-accesibilidad');
+    if (btn) btn.textContent = '𝐀− Letra normal';
+  });
 }
 
 function toggleGlosario() {
