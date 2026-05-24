@@ -162,7 +162,7 @@ footer{border-top:1px solid rgba(255,255,255,0.04);padding:2rem 1.5rem;text-alig
 footer strong{color:var(--red);font-family:'Bebas Neue',sans-serif;letter-spacing:2px;font-size:0.9rem}
 
 <style>
-/* MODO ACCESIBLE */
+/* IMÁGENES Y FUENTES — ACCESIBILIDAD */
 body.modo-accesible {
   font-size: 22px !important;
   line-height: 1.9 !important;
@@ -276,6 +276,45 @@ body.modo-accesible div[style*="font-size:0.95rem"] {
 </style>
 
 </style>
+
+/* ── IMÁGENES GRANDES EN MOBILE (siempre) ─────────────────────── */
+@media (max-width: 768px) {
+  .content-img { width:100% !important; max-width:100% !important; margin:1.5rem 0 !important; }
+  .mod-hero { height:220px !important; }
+  div[style*="max-width:360px"] { max-width:100% !important; }
+}
+
+/* ── MODO ACCESIBLE — fuente 24px + imágenes full width ──────── */
+body.modo-accesible { font-size:24px !important; line-height:2 !important; }
+body.modo-accesible .content-img { width:100% !important; max-width:100% !important; }
+body.modo-accesible div[style*="max-width:360px"] { max-width:100% !important; }
+body.modo-accesible .intro-text { font-size:1.2rem !important; line-height:2.1 !important; }
+body.modo-accesible .alert-list li,
+body.modo-accesible .rule-list li { font-size:1.2rem !important; line-height:2.1 !important; }
+body.modo-accesible .module-desc { font-size:1.15rem !important; line-height:2 !important; }
+body.modo-accesible .content-block p,
+body.modo-accesible .highlight-box p { font-size:1.2rem !important; line-height:2.1 !important; }
+body.modo-accesible .tool-desc { font-size:1.1rem !important; line-height:2 !important; }
+body.modo-accesible .tool-name { font-size:1.2rem !important; }
+body.modo-accesible .tool-url { font-size:1rem !important; }
+body.modo-accesible .step-text { font-size:1.15rem !important; line-height:2 !important; }
+body.modo-accesible .step-text strong { font-size:1.2rem !important; }
+body.modo-accesible .quiz-btn { font-size:1.4rem !important; padding:1.5rem 2rem !important; min-height:60px !important; }
+body.modo-accesible .module-cta { font-size:1rem !important; padding:16px 22px !important; min-height:52px !important; }
+body.modo-accesible .back-btn { font-size:1.05rem !important; min-height:52px !important; }
+body.modo-accesible .nav-links a { font-size:1.05rem !important; }
+body.modo-accesible .hero-sub { font-size:1.2rem !important; }
+body.modo-accesible .alert-banner { font-size:1.15rem !important; line-height:1.9 !important; padding:1.5rem !important; }
+body.modo-accesible .content-block h3 { font-size:1rem !important; letter-spacing:1.5px !important; }
+body.modo-accesible .module-title { font-size:1.35rem !important; line-height:1.5 !important; }
+body.modo-accesible .content-img-caption { font-size:1rem !important; line-height:1.8 !important; }
+body.modo-accesible footer { font-size:1.05rem !important; line-height:1.9 !important; }
+body.modo-accesible [style*="font-size:0.7"],
+body.modo-accesible [style*="font-size:0.8"],
+body.modo-accesible [style*="font-size:0.9"],
+body.modo-accesible [style*="font-size:0.95"] { font-size:1.05rem !important; line-height:1.9 !important; }
+body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; line-height:2 !important; }
+
 </head>
 <body>
 
