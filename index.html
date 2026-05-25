@@ -2,6 +2,22 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https:;
+    frame-src https://www.youtube.com https://docs.google.com https://api.whatsapp.com;
+    connect-src 'self';
+    base-uri 'self';
+    form-action 'self' https://docs.google.com;
+  ">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Aprendé a identificar estafas online en 5 módulos. Gratis, sin registro, a tu ritmo.">
 <title>No te pesquen</title>
