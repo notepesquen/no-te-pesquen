@@ -2,38 +2,22 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-  <!-- Security Headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self' 'unsafe-inline';
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    font-src 'self' https://fonts.gstatic.com;
-    img-src 'self' data: https:;
-    frame-src https://www.youtube.com https://docs.google.com https://api.whatsapp.com;
-    connect-src 'self';
-    base-uri 'self';
-    form-action 'self' https://docs.google.com;
-  ">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Aprendé a identificar estafas online en 5 módulos. Gratis, sin registro, a tu ritmo.">
 <title>No te pesquen</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2330;--red:#FF4B2B;--yellow:#FFD600;--white:#f0f6fc;--gray:#b0bac4;--border:rgba(255,75,43,0.15)}
+:root{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2330;--red:#FF4B2B;--yellow:#FFD600;--white:#f0f6fc;--gray:#8b949e;--border:rgba(255,75,43,0.15)}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);min-height:100vh;overflow-x:hidden;font-size:18px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);min-height:100vh;overflow-x:hidden}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px}
 .nav-brand{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:2px;color:var(--white);cursor:pointer;flex-shrink:0}
 .nav-brand span{color:var(--red)}
 .nav-links{display:flex;gap:1rem;list-style:none;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:4px 0}
-.nav-links a{color:var(--gray);text-decoration:none;font-size:0.88rem;font-weight:500;letter-spacing:0.5px;transition:color 0.2s;cursor:pointer;white-space:nowrap}
+.nav-links a{color:var(--gray);text-decoration:none;font-size:0.75rem;font-weight:500;letter-spacing:0.5px;transition:color 0.2s;cursor:pointer;white-space:nowrap}
 .nav-links a:hover{color:var(--yellow)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hamburger span{display:block;width:22px;height:2px;background:var(--gray);transition:0.3s}
@@ -61,7 +45,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.97);backdrop-fi
 .stat-label{font-size:0.65rem;color:var(--gray);letter-spacing:1px;text-transform:uppercase}
 
 /* ALERT BANNER */
-.alert-banner{background:linear-gradient(90deg,rgba(255,75,43,0.08),rgba(255,214,0,0.04),rgba(255,75,43,0.08));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1rem 1.5rem;text-align:center;font-size:0.95rem;color:var(--gray);line-height:1.5}
+.alert-banner{background:linear-gradient(90deg,rgba(255,75,43,0.08),rgba(255,214,0,0.04),rgba(255,75,43,0.08));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1rem 1.5rem;text-align:center;font-size:0.82rem;color:var(--gray);line-height:1.5}
 .alert-banner strong{color:var(--yellow)}
 
 /* MODULES GRID */
@@ -73,26 +57,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.97);backdrop-fi
 .module-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--red);transform:scaleY(0);transition:transform 0.25s;transform-origin:bottom}
 .module-card:hover{background:var(--bg3)}
 .module-card:hover::before{transform:scaleY(1)}
-.module-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:rgba(255,75,43,0.45);line-height:1;margin-bottom:0.4rem;transition:color 0.2s}
+.module-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:rgba(255,75,43,0.12);line-height:1;margin-bottom:0.4rem;transition:color 0.2s}
 .module-card:hover .module-num{color:rgba(255,75,43,0.35)}
-.module-tag{font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);margin-bottom:0.4rem}
-.module-title{font-size:1.1rem;font-weight:700;margin-bottom:0.6rem;color:var(--white);line-height:1.3}
-.module-desc{font-size:1rem;color:var(--gray);line-height:1.65;margin-bottom:1rem}
-.module-cta{
-  display:inline-block;
-  font-size:0.75rem;
-  font-weight:700;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  color:var(--bg);
-  background:var(--red);
-  padding:10px 18px;
-  margin-top:0.5rem;
-  min-height:44px;
-  line-height:1.5;
-  border-radius:2px;
-}
-.module-card:hover .module-cta{background:#e63e22}
+.module-tag{font-size:0.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);margin-bottom:0.4rem}
+.module-title{font-size:1rem;font-weight:700;margin-bottom:0.6rem;color:var(--white);line-height:1.3}
+.module-desc{font-size:0.82rem;color:var(--gray);line-height:1.6;margin-bottom:1rem}
+.module-cta{font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red)}
 
 /* MODULE PAGE */
 .page{display:none}
@@ -103,41 +73,41 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.97);backdrop-fi
 .mod-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .mod-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,17,23,0.1) 0%,rgba(13,17,23,0.95) 100%)}
 .mod-hero-text{position:relative;padding:1.5rem;width:100%}
-.mod-hero-text .module-tag{font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);margin-bottom:0.4rem}
+.mod-hero-text .module-tag{font-size:0.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);margin-bottom:0.4rem}
 .mod-hero-text h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,6vw,3.5rem);letter-spacing:2px;line-height:1;color:var(--white)}
 
 .mod-body{max-width:800px;margin:0 auto;padding:2rem 1.5rem}
-.back-btn{display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray);background:none;border:none;cursor:pointer;margin-bottom:1.75rem;transition:color 0.2s;-webkit-tap-highlight-color:transparent;min-height:44px;padding:4px 0}
+.back-btn{display:inline-flex;align-items:center;gap:6px;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray);background:none;border:none;cursor:pointer;margin-bottom:1.75rem;transition:color 0.2s;-webkit-tap-highlight-color:transparent}
 .back-btn:hover{color:var(--white)}
 
-.intro-text{font-size:1.1rem;color:var(--gray);line-height:1.8;margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,0.05)}
+.intro-text{font-size:0.95rem;color:var(--gray);line-height:1.75;margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,0.05)}
 
 .content-img{width:100%;border-radius:2px;margin:1.25rem 0;display:block}
-.content-img-caption{font-size:0.88rem;color:var(--gray);font-style:italic;margin-top:-0.75rem;margin-bottom:1.25rem;line-height:1.5}
+.content-img-caption{font-size:0.75rem;color:var(--gray);font-style:italic;margin-top:-0.75rem;margin-bottom:1.25rem;line-height:1.5}
 
 .content-block{background:var(--bg2);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1.5rem;margin-bottom:1rem}
-.content-block h3{font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);margin-bottom:1rem}
-.content-block p{font-size:1rem;color:var(--gray);line-height:1.7;margin-bottom:0.5rem}
+.content-block h3{font-size:0.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);margin-bottom:1rem}
+.content-block p{font-size:0.875rem;color:var(--gray);line-height:1.7;margin-bottom:0.5rem}
 .content-block p:last-child{margin-bottom:0}
 
 .rule-list{list-style:none;display:flex;flex-direction:column;gap:0.875rem}
-.rule-list li{display:flex;align-items:flex-start;gap:0.75rem;font-size:1.05rem;line-height:1.65;color:var(--gray)}
-.rule-list li .rule-num{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:#ff6b4a;flex-shrink:0;width:22px;line-height:1.2;font-weight:700}
+.rule-list li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.875rem;line-height:1.55;color:var(--gray)}
+.rule-list li .rule-num{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--red);flex-shrink:0;width:20px;line-height:1.2}
 
 .alert-list{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
-.alert-list li{display:flex;align-items:flex-start;gap:0.75rem;font-size:1.05rem;line-height:1.65;color:var(--gray)}
-.alert-list li::before{content:'⚠';color:#ff6b4a;font-size:0.8rem;flex-shrink:0;margin-top:3px}
+.alert-list li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.875rem;line-height:1.55;color:var(--gray)}
+.alert-list li::before{content:'⚠';color:var(--red);font-size:0.7rem;flex-shrink:0;margin-top:3px}
 
 .highlight-box{background:linear-gradient(135deg,rgba(255,75,43,0.08),rgba(255,214,0,0.05));border:1px solid rgba(255,75,43,0.25);padding:1.5rem;margin:1.5rem 0}
-.highlight-box p{font-size:1rem;line-height:1.7;color:var(--white);font-weight:500}
+.highlight-box p{font-size:0.9rem;line-height:1.7;color:var(--white);font-weight:500}
 .highlight-box p strong{color:var(--yellow)}
 
 .tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.75rem;margin-top:0.75rem}
 .tool-card{background:var(--bg3);border:1px solid rgba(255,255,255,0.06);padding:1.25rem;text-decoration:none;transition:border-color 0.2s,background 0.2s;display:block}
 .tool-card:hover{border-color:rgba(255,75,43,0.4);background:var(--bg2)}
-.tool-name{font-size:0.95rem;font-weight:700;color:var(--white);margin-bottom:0.25rem}
-.tool-url{font-size:0.82rem;color:var(--red);margin-bottom:0.5rem;font-weight:600}
-.tool-desc{font-size:0.9rem;color:var(--gray);line-height:1.5}
+.tool-name{font-size:0.85rem;font-weight:700;color:var(--white);margin-bottom:0.25rem}
+.tool-url{font-size:0.7rem;color:var(--red);margin-bottom:0.5rem;font-weight:600}
+.tool-desc{font-size:0.78rem;color:var(--gray);line-height:1.5}
 
 .contacts-table{width:100%;border-collapse:collapse;margin-top:0.75rem}
 .contacts-table tr{border-bottom:1px solid rgba(255,255,255,0.04)}
@@ -149,10 +119,10 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.97);backdrop-fi
 .protocol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;margin-top:0.75rem}
 .protocol-step{background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem;display:flex;gap:0.75rem;align-items:flex-start}
 .step-num{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--red);line-height:1;flex-shrink:0}
-.step-text{font-size:0.95rem;color:var(--gray);line-height:1.5}
-.step-text strong{color:var(--white);display:block;font-size:0.98rem;margin-bottom:0.2rem}
+.step-text{font-size:0.82rem;color:var(--gray);line-height:1.5}
+.step-text strong{color:var(--white);display:block;font-size:0.85rem;margin-bottom:0.2rem}
 
-.quiz-btn{display:block;width:100%;background:var(--red);color:white;border:none;padding:1.1rem 2rem;min-height:44px;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:2px;cursor:pointer;transition:background 0.2s,transform 0.1s;margin-top:2rem;text-align:center;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.quiz-btn{display:block;width:100%;background:var(--red);color:white;border:none;padding:1.1rem 2rem;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:2px;cursor:pointer;transition:background 0.2s,transform 0.1s;margin-top:2rem;text-align:center;text-decoration:none;-webkit-tap-highlight-color:transparent}
 .quiz-btn:hover{background:#e63e22;transform:translateY(-1px)}
 .quiz-btn:active{transform:translateY(0)}
 
@@ -174,184 +144,14 @@ nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.97);backdrop-fi
 .download-note{font-size:0.8rem;color:var(--gray);text-align:center;margin-top:0.5rem;line-height:1.5}
 
 /* FOOTER */
-footer{border-top:1px solid rgba(255,255,255,0.04);padding:2rem 1.5rem;text-align:center;font-size:0.88rem;color:var(--gray);letter-spacing:0.5px}
+footer{border-top:1px solid rgba(255,255,255,0.04);padding:2rem 1.5rem;text-align:center;font-size:0.72rem;color:var(--gray);letter-spacing:0.5px}
 footer strong{color:var(--red);font-family:'Bebas Neue',sans-serif;letter-spacing:2px;font-size:0.9rem}
-
-<style>
-/* IMÁGENES Y FUENTES — ACCESIBILIDAD */
-body.modo-accesible {
-  font-size: 22px !important;
-  line-height: 1.9 !important;
-}
-
-body.modo-accesible .intro-text,
-body.modo-accesible .alert-list li,
-body.modo-accesible .rule-list li,
-body.modo-accesible .content-block p,
-body.modo-accesible .module-desc,
-body.modo-accesible .tool-desc,
-body.modo-accesible .step-text,
-body.modo-accesible .highlight-box p {
-  font-size: 1.15rem !important;
-  line-height: 2 !important;
-}
-
-body.modo-accesible .module-title {
-  font-size: 1.3rem !important;
-}
-
-body.modo-accesible .content-block h3 {
-  font-size: 1rem !important;
-  letter-spacing: 1px !important;
-}
-
-body.modo-accesible .nav-links a {
-  font-size: 1rem !important;
-}
-
-body.modo-accesible .tool-name {
-  font-size: 1.1rem !important;
-}
-
-body.modo-accesible .tool-url {
-  font-size: 0.95rem !important;
-}
-
-body.modo-accesible .contacts-table td {
-  font-size: 1.05rem !important;
-  padding: 1rem 0.5rem !important;
-}
-
-body.modo-accesible .quiz-btn {
-  font-size: 1.3rem !important;
-  padding: 1.4rem 2rem !important;
-  min-height: 56px !important;
-}
-
-body.modo-accesible .back-btn {
-  font-size: 1rem !important;
-  min-height: 50px !important;
-}
-
-body.modo-accesible .module-cta {
-  font-size: 0.95rem !important;
-  padding: 14px 20px !important;
-  min-height: 50px !important;
-}
-
-body.modo-accesible .alert-list li::before {
-  font-size: 1rem !important;
-  margin-top: 4px !important;
-}
-
-body.modo-accesible .rule-list li .rule-num {
-  font-size: 1.4rem !important;
-  width: 26px !important;
-}
-
-body.modo-accesible .protocol-step .step-num {
-  font-size: 2.4rem !important;
-}
-
-body.modo-accesible .protocol-step .step-text {
-  font-size: 1.05rem !important;
-}
-
-body.modo-accesible .hero-sub {
-  font-size: 1.15rem !important;
-}
-
-body.modo-accesible .alert-banner {
-  font-size: 1.1rem !important;
-  line-height: 1.8 !important;
-}
-
-body.modo-accesible footer {
-  font-size: 1rem !important;
-}
-
-body.modo-accesible #btn-accesibilidad {
-  background: var(--red) !important;
-  color: white !important;
-  border-color: var(--red) !important;
-}
-
-/* Glosario en modo accesible */
-body.modo-accesible #glosario-body div[style*="font-size:0.95rem"] {
-  font-size: 1.1rem !important;
-  line-height: 1.9 !important;
-}
-
-body.modo-accesible div[style*="font-size:0.82rem"],
-body.modo-accesible div[style*="font-size:0.88rem"],
-body.modo-accesible div[style*="font-size:0.9rem"],
-body.modo-accesible div[style*="font-size:0.95rem"] {
-  font-size: 1.05rem !important;
-  line-height: 1.9 !important;
-}
-</style>
-
-</style>
-
-<style>
-/* IMÁGENES GRANDES EN MOBILE */
-@media (max-width: 768px) {
-  .content-img { width:100% !important; max-width:100% !important; margin:1.5rem 0 !important; }
-  .mod-hero { height:220px !important; }
-  div[style*="max-width:360px"] { max-width:100% !important; }
-}
-
-/* MODO ACCESIBLE */
-body.modo-accesible { font-size:24px !important; line-height:2 !important; }
-body.modo-accesible .content-img { width:100% !important; max-width:100% !important; }
-body.modo-accesible div[style*="max-width:360px"] { max-width:100% !important; }
-body.modo-accesible .intro-text { font-size:1.2rem !important; line-height:2.1 !important; }
-body.modo-accesible .alert-list li,
-body.modo-accesible .rule-list li { font-size:1.2rem !important; line-height:2.1 !important; }
-body.modo-accesible .module-desc { font-size:1.15rem !important; line-height:2 !important; }
-body.modo-accesible .content-block p,
-body.modo-accesible .highlight-box p { font-size:1.2rem !important; line-height:2.1 !important; }
-body.modo-accesible .tool-desc { font-size:1.1rem !important; line-height:2 !important; }
-body.modo-accesible .tool-name { font-size:1.2rem !important; }
-body.modo-accesible .tool-url { font-size:1rem !important; }
-body.modo-accesible .step-text { font-size:1.15rem !important; line-height:2 !important; }
-body.modo-accesible .step-text strong { font-size:1.2rem !important; }
-body.modo-accesible .quiz-btn { font-size:1.4rem !important; padding:1.5rem 2rem !important; min-height:60px !important; }
-body.modo-accesible .module-cta { font-size:1rem !important; padding:16px 22px !important; min-height:52px !important; }
-body.modo-accesible .back-btn { font-size:1.05rem !important; min-height:52px !important; }
-body.modo-accesible .nav-links a { font-size:1.05rem !important; }
-body.modo-accesible .hero-sub { font-size:1.2rem !important; }
-body.modo-accesible .alert-banner { font-size:1.15rem !important; line-height:1.9 !important; padding:1.5rem !important; }
-body.modo-accesible .content-block h3 { font-size:1rem !important; letter-spacing:1.5px !important; }
-body.modo-accesible .module-title { font-size:1.35rem !important; line-height:1.5 !important; }
-body.modo-accesible .content-img-caption { font-size:1rem !important; line-height:1.8 !important; }
-body.modo-accesible footer { font-size:1.05rem !important; line-height:1.9 !important; }
-body.modo-accesible [style*="font-size:0.7"],
-body.modo-accesible [style*="font-size:0.8"],
-body.modo-accesible [style*="font-size:0.9"],
-body.modo-accesible [style*="font-size:0.95"] { font-size:1.05rem !important; line-height:1.9 !important; }
-body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; line-height:2 !important; }
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-brand" onclick="showPage('home')">NO TE <span>PESQUEN</span></div>
-  <button onclick="toggleAccesibilidad()" id="btn-accesibilidad" style="
-    background:none;
-    border:1px solid rgba(255,75,43,0.4);
-    color:var(--gray);
-    font-size:0.8rem;
-    font-weight:700;
-    letter-spacing:0.5px;
-    padding:6px 12px;
-    cursor:pointer;
-    border-radius:2px;
-    white-space:nowrap;
-    min-height:44px;
-    transition:all 0.2s;
-    flex-shrink:0;
-  " title="Aumentar tamaño de letra">𝐀+ Letra grande</button>
   <div class="hamburger" onclick="toggleMenu()" id="hamburger">
     <span></span><span></span><span></span>
   </div>
@@ -428,7 +228,7 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
         <div class="module-num">06</div>
         <div class="module-tag">Cierre</div>
         <div class="module-title">Ya sabés defenderte</div>
-        <div class="module-desc">Las 10 reglas de oro, todos los ejercicios y la guía rápida para compartir.</div>
+        <div class="module-desc">Las 10 reglas de oro, todos los quizzes y la guía rápida para compartir.</div>
         <div class="module-cta">Ver resumen →</div>
       </a>
     </div>
@@ -463,7 +263,7 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
     <div class="highlight-box">
       <p><strong>Regla fundamental:</strong> Si un mensaje te genera urgencia, miedo o una oferta demasiado buena — frenate. Ese es exactamente el objetivo del estafador.</p>
     </div>
-    <a class="quiz-btn" href="https://forms.gle/MjqYyfGACVu3nU3v6" target="_blank">PONETE A PRUEBA — MÓDULO 1 →</a>
+    <a class="quiz-btn" href="https://forms.gle/MjqYyfGACVu3nU3v6" target="_blank">IR AL QUIZ DEL MÓDULO 1 →</a>
     <a class="quiz-btn" href="#" onclick="showPage('m2');return false" style="background:var(--bg2);border:1px solid var(--border);margin-top:0.75rem;color:var(--white)">SIGUIENTE: MÓDULO 2 — MENSAJES FALSOS →</a>
   </div>
 </div>
@@ -487,7 +287,7 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
         <li><span class="rule-num">1</span>Te crea urgencia: "tu cuenta será bloqueada en 24hs"</li>
         <li><span class="rule-num">2</span>Te pide datos que ninguna empresa real pide por mensaje: contraseñas, códigos, tarjeta</li>
         <li><span class="rule-num">3</span>El remitente tiene un dominio raro: no es @banco.com.ar sino @banco-atencion.net</li>
-        <li><span class="rule-num">4</span>El link tiene un dominio raro o desconocido — no lo toques. Buscá el sitio oficial escribiendo la URL directamente en el navegador</li>
+        <li><span class="rule-num">4</span>El link no lleva al sitio oficial — pasá el dedo por encima antes de tocar</li>
         <li><span class="rule-num">5</span>Te ofrece algo demasiado bueno: premios, reembolsos, herencias</li>
       </ul>
     </div>
@@ -504,13 +304,10 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
         <li>Llamado falso de ANSES sobre bono no cobrado</li>
       </ul>
     </div>
-    <div style="max-width:360px;margin:1.5rem auto">
-      <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border:1px solid var(--border)">
-        <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/XXx1FlnMO8w" title="Cómo identificar una estafa telefónica del banco" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <p class="content-img-caption" style="text-align:center">Caso real: así suena una llamada fraudulenta haciéndose pasar por tu banco.</p>
+    <div class="highlight-box">
+      <p><strong>Desafío interactivo:</strong> Completá el Scam-Desafío de Factchequeado por WhatsApp para poner a prueba lo que aprendiste con casos reales. <a href="https://api.whatsapp.com/send?phone=13024132953" target="_blank" style="color:var(--yellow);font-weight:700">Abrir desafío →</a></p>
     </div>
-    <a class="quiz-btn" href="https://forms.gle/Dwoj8ssftYbjxN8n8" target="_blank">PONETE A PRUEBA — MÓDULO 2 →</a>
+    <a class="quiz-btn" href="https://forms.gle/Dwoj8ssftYbjxN8n8" target="_blank">IR AL QUIZ DEL MÓDULO 2 →</a>
     <a class="quiz-btn" href="#" onclick="showPage('m3');return false" style="background:var(--bg2);border:1px solid var(--border);margin-top:0.75rem;color:var(--white)">SIGUIENTE: MÓDULO 3 — BUSCÁ SIN CAER →</a>
   </div>
 </div>
@@ -540,159 +337,20 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
     </div>
     <img class="content-img" src="imagenes/google-anuncio.png" alt="Anuncio peligroso en Google">
     <p class="content-img-caption">El primer resultado no siempre es el oficial. Los estafadores pagan para aparecer primero en Google.</p>
-    <div style="max-width:360px;margin:1.5rem auto">
-      <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border:1px solid var(--border)">
-        <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/MoVzs7AlW0g" title="Estafa de Booking: no uses el número del mensaje" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <p class="content-img-caption" style="text-align:center">Caso real: cómo funciona la estafa de Booking y por qué siempre tenés que contactar desde la app o web oficial.</p>
-    </div>
-        <div class="content-block">
+    <div class="content-block">
       <h3>Contactos oficiales verificados</h3>
-      <p style="font-size:0.78rem;color:var(--gray);margin-bottom:1.25rem;line-height:1.6">Datos verificados en fuentes oficiales. Ante cualquier duda, accedé siempre desde la URL oficial escribiéndola directamente en el navegador.</p>
-
-      <div style="display:flex;flex-direction:column;gap:1rem">
-
-        <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem">
-          <div style="font-weight:700;color:var(--white);margin-bottom:0.5rem">ANSES</div>
-          <div style="font-size:1rem;color:var(--gray);line-height:1.9">
-            📞 <strong style="color:var(--yellow)">130</strong> — Lunes a viernes 8 a 20 hs<br>
-            🌐 <a href="https://www.anses.gob.ar" target="_blank" style="color:var(--yellow)">anses.gob.ar</a> — Mi ANSES web y app<br>
-            ✉️ Canal escrito: Atención Virtual desde Mi ANSES
-          </div>
-        </div>
-
-        <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem">
-          <div style="font-weight:700;color:var(--white);margin-bottom:0.5rem">ARCA (ex AFIP)</div>
-          <div style="font-size:1rem;color:var(--gray);line-height:1.9">
-            📞 <strong style="color:var(--yellow)">0810-999-2722</strong> — Consultas generales<br>
-            📞 <strong style="color:var(--yellow)">0800-999-3368</strong> — Denuncias (10 a 16 hs)<br>
-            🌐 <a href="https://www.arca.gob.ar/atencion" target="_blank" style="color:var(--yellow)">arca.gob.ar/atencion</a>
-          </div>
-        </div>
-
-        <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem">
-          <div style="font-weight:700;color:var(--white);margin-bottom:0.5rem">Defensa del Consumidor</div>
-          <div style="font-size:1rem;color:var(--gray);line-height:1.9">
-            📞 <strong style="color:var(--yellow)">0800-666-1518</strong><br>
-            📱 SAC vía TINA: <strong style="color:var(--yellow)">+54 11 3910-1010</strong><br>
-            🌐 <a href="https://www.argentina.gob.ar/defensadelconsumidor" target="_blank" style="color:var(--yellow)">argentina.gob.ar/defensadelconsumidor</a><br>
-            ✉️ <a href="mailto:consultas@consumidor.gob.ar" style="color:var(--yellow)">consultas@consumidor.gob.ar</a>
-          </div>
-        </div>
-
-        <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem">
-          <div style="font-weight:700;color:var(--white);margin-bottom:0.5rem">UFECI — Unidad Fiscal de Ciberdelincuencia</div>
-          <div style="font-size:1rem;color:var(--gray);line-height:1.9">
-            📞 <strong style="color:var(--yellow)">(+54 11) 5071-0040</strong><br>
-            🌐 <a href="https://www.mpf.gob.ar/ufeci/" target="_blank" style="color:var(--yellow)">mpf.gob.ar/ufeci</a><br>
-            ✉️ <a href="mailto:denunciasufeci@mpf.gov.ar" style="color:var(--yellow)">denunciasufeci@mpf.gov.ar</a>
-          </div>
-        </div>
-
-        <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem">
-          <div style="font-weight:700;color:var(--white);margin-bottom:0.5rem">BCRA — Banco Central de la República Argentina</div>
-          <div style="font-size:1rem;color:var(--gray);line-height:1.9">
-            🌐 <a href="https://www.bcra.gob.ar/realizar-un-reclamo-ante-el-banco-central-por-fraude-o-estafa/" target="_blank" style="color:var(--yellow)">Formulario de reclamo por fraude</a><br>
-            ⚠️ El BCRA interviene como <strong style="color:var(--white)">segunda instancia</strong>: primero reclamá ante tu banco y si no hay respuesta satisfactoria en 10 días hábiles, recurrí al BCRA.
-          </div>
-        </div>
-
-        <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem">
-          <div style="font-weight:700;color:var(--white);margin-bottom:0.5rem">Banco Nación</div>
-          <div style="font-size:1rem;color:var(--gray);line-height:1.9">
-            📞 <strong style="color:var(--yellow)">0800-888-5465</strong> — Fraude / actividad sospechosa, 24 hs<br>
-            📞 <strong style="color:var(--yellow)">0810-666-4444</strong> — Atención general<br>
-            🌐 <a href="https://www.bna.com.ar" target="_blank" style="color:var(--yellow)">bna.com.ar</a><br>
-            ✉️ <a href="mailto:asistenciaproteccionusuarios@bna.com.ar" style="color:var(--yellow)">asistenciaproteccionusuarios@bna.com.ar</a>
-          </div>
-        </div>
-
-        <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem">
-          <div style="font-weight:700;color:var(--white);margin-bottom:0.5rem">Aerolíneas Argentinas</div>
-          <div style="font-size:1rem;color:var(--gray);line-height:1.9">
-            📞 <strong style="color:var(--yellow)">+54 11 5199-3555</strong><br>
-            💬 WhatsApp oficial: <strong style="color:var(--yellow)">+54 9 11 4940-4798</strong><br>
-            🌐 <a href="https://www.aerolineas.com.ar" target="_blank" style="color:var(--yellow)">aerolineas.com.ar</a>
-          </div>
-        </div>
-
-        <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem">
-          <div style="font-weight:700;color:var(--white);margin-bottom:0.5rem">Correo Argentino</div>
-          <div style="font-size:1rem;color:var(--gray);line-height:1.9">
-            📞 <strong style="color:var(--yellow)">0810-777-7787</strong><br>
-            🌐 <a href="https://www.correoargentino.com.ar" target="_blank" style="color:var(--yellow)">correoargentino.com.ar</a><br>
-            ⚠️ Correo Argentino advierte: verificá siempre que la URL sea el dominio oficial antes de ingresar datos.
-          </div>
-        </div>
-
-        <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);padding:1.25rem">
-          <div style="font-weight:700;color:var(--white);margin-bottom:0.5rem">Mercado Pago</div>
-          <div style="font-size:1rem;color:var(--gray);line-height:1.9">
-            ⚠️ No tiene teléfono público verificado. Si tu cuenta fue comprometida, actuá desde la app.<br>
-            🌐 <a href="https://www.mercadopago.com.ar/ayuda" target="_blank" style="color:var(--yellow)">mercadopago.com.ar/ayuda</a> — Seguridad desde tu cuenta<br>
-            ✉️ <a href="mailto:ayuda@mercadopago.com.ar" style="color:var(--yellow)">ayuda@mercadopago.com.ar</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div style="margin-top:1.25rem;padding:1rem;background:rgba(255,75,43,0.08);border:1px solid rgba(255,75,43,0.2);font-size:0.78rem;color:var(--gray);line-height:1.6">
-        ⚠️ <strong style="color:var(--white)">Importante:</strong> Los números y datos pueden actualizarse. Siempre verificá en el sitio oficial antes de llamar — escribí la URL directamente en el navegador, nunca la busques en Google.
-      </div>
+      <table class="contacts-table">
+        <tr><td>ANSES</td><td>130</td></tr>
+        <tr><td>AFIP</td><td>0800 999 2347</td></tr>
+        <tr><td>Banco Nación</td><td>0800 666 4444</td></tr>
+        <tr><td>Aerolíneas Argentinas</td><td>0810 222 86527</td></tr>
+        <tr><td>Correo Argentino</td><td>0810 222 2672</td></tr>
+        <tr><td>Mercado Pago</td><td>Solo por app o sitio oficial</td></tr>
+      </table>
     </div>
-        <div class="content-block" style="margin-top:1.5rem">
-      <h3>⚠️ Compras online con descuento por transferencia</h3>
-      <p style="font-size:1rem;color:var(--gray);line-height:1.7;margin-bottom:1.25rem">El descuento por transferencia es legítimo en muchas tiendas. Pero también es la táctica más usada por tiendas fraudulentas. Tener CUIT registrado y dominio .com.ar no garantiza nada — estas son las señales reales que importan:</p>
-
-      <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.25rem">
-
-        <div style="background:var(--bg3);border-left:3px solid var(--yellow);padding:1rem 1.25rem">
-          <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.4rem">1 — Buscá reclamos antes de comprar</div>
-          <div style="font-size:0.95rem;color:var(--gray);line-height:1.7">Buscá el nombre de la tienda en Google seguido de "estafa" o "reclamo". También buscá directamente en:<br>
-          <a href="https://www.tuquejasuma.com/" target="_blank" style="color:var(--yellow);font-weight:700;display:inline-block;margin-top:0.4rem">→ tuquejasuma.com — base de reclamos contra empresas argentinas</a><br>
-          <span style="font-size:0.88rem;color:var(--gray);display:block;margin-top:0.3rem">Más de 3 reclamos sin respuesta es señal seria. Si los comentarios en redes están desactivados o borrados, peor todavía.</span>
-          </div>
-        </div>
-
-        <div style="background:var(--bg3);border-left:3px solid var(--yellow);padding:1rem 1.25rem">
-          <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.4rem">2 — Revisá las reseñas con criterio</div>
-          <div style="font-size:0.95rem;color:var(--gray);line-height:1.7">Las tiendas fraudulentas tienen reseñas falsas: todas de 5 estrellas, sin texto real, sin fotos, publicadas en pocos días. Buscá reseñas en Google Maps y fijate si el negocio responde las negativas o las ignora.</div>
-        </div>
-
-        <div style="background:var(--bg3);border-left:3px solid var(--yellow);padding:1rem 1.25rem">
-          <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.4rem">3 — Preferí pagar con tarjeta aunque pierdas el descuento</div>
-          <div style="font-size:0.95rem;color:var(--gray);line-height:1.7">Con tarjeta podés hacer un <strong style="color:var(--white)">contracargo</strong> si no recibís el producto — llamás al banco y podés recuperar el dinero. Con transferencia es casi imposible. Si una tienda solo acepta transferencia, es señal de alerta.</div>
-        </div>
-
-        <div style="background:var(--bg3);border-left:3px solid var(--yellow);padding:1rem 1.25rem">
-          <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.4rem">4 — Descuento mayor al 25% con urgencia = investigá primero</div>
-          <div style="font-size:0.95rem;color:var(--gray);line-height:1.7">"Solo hoy", "últimas unidades", "2x1 por tiempo limitado" son tácticas para apurar tu decisión antes de que puedas verificar. A mayor descuento y mayor urgencia, más importante tomarse 5 minutos para buscar reclamos.</div>
-        </div>
-
-        <div style="background:var(--bg3);border-left:3px solid var(--yellow);padding:1rem 1.25rem">
-          <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.4rem">5 — Verificá que tengan contacto real</div>
-          <div style="font-size:0.95rem;color:var(--gray);line-height:1.7">Una tienda seria tiene teléfono, mail y responde antes de que compres. Si el único contacto es un formulario web o un WhatsApp que no responde, es señal de alerta.</div>
-        </div>
-
-      </div>
-
-      <div style="background:rgba(255,75,43,0.08);border:1px solid rgba(255,75,43,0.25);padding:1rem 1.25rem">
-        <div style="font-weight:700;color:var(--white);font-size:0.95rem;margin-bottom:0.5rem">Si pagaste y no recibiste nada</div>
-        <div style="font-size:0.95rem;color:var(--gray);line-height:1.8">
-          1. Capturá todo antes de que borren publicaciones y conversaciones<br>
-          2. El plazo de 30 días que invocan aplica a devoluciones voluntarias — no a incumplimiento de entrega<br>
-          3. Denunciá en Defensa del Consumidor: <strong style="color:var(--yellow)">0800-666-1518</strong><br>
-          4. Si pagaste con tarjeta, llamá al banco para iniciar un contracargo
-        </div>
-      </div>
-
-    </div>
-
-      
-
-    </div>
-
-    <a class="quiz-btn" href="https://forms.gle/aBbUxayxHFHcBYUv6" target="_blank">PONETE A PRUEBA — MÓDULO 3 →</a>
+    <img class="content-img" src="imagenes/infografia-contactos.png" alt="Guía rápida de contactos oficiales">
+    <p class="content-img-caption">Guardá esta imagen en tu celular para consultarla cuando necesites llamar a una empresa o al estado.</p>
+    <a class="quiz-btn" href="https://forms.gle/aBbUxayxHFHcBYUv6" target="_blank">IR AL QUIZ DEL MÓDULO 3 →</a>
     <a class="quiz-btn" href="#" onclick="showPage('m4');return false" style="background:var(--bg2);border:1px solid var(--border);margin-top:0.75rem;color:var(--white)">SIGUIENTE: MÓDULO 4 — CAÍSTE. AHORA QUÉ. →</a>
   </div>
 </div>
@@ -710,11 +368,7 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
   <div class="mod-body">
     <button class="back-btn" onclick="showPage('home')">← Volver al inicio</button>
     <p class="intro-text">Que te hayan estafado no es una vergüenza ni una señal de ignorancia. Le pasa a médicos, abogados, ingenieros. Lo importante es actuar rápido y en el orden correcto.</p>
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.5rem 0;border:1px solid var(--border)">
-      <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/TjBepOAPw3I" title="Paso a paso para recuperar plata de una estafa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <p class="content-img-caption">Caso real desde Argentina: qué pasos seguir para intentar recuperar el dinero si te estafaron.</p>
-        <img class="content-img" src="imagenes/protocolo-pasos.png" alt="Protocolo de 6 pasos">
+    <img class="content-img" src="imagenes/protocolo-pasos.png" alt="Protocolo de 6 pasos">
     <p class="content-img-caption">Cada minuto cuenta. Seguí estos pasos en orden y sin saltear ninguno.</p>
     <div class="content-block">
       <h3>Protocolo de acción — en orden</h3>
@@ -731,15 +385,14 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
       <h3>Dónde denunciar en Argentina</h3>
       <ul class="alert-list">
         <li>Fiscalía o comisaría más cercana</li>
-        <li>UFECI (Unidad Fiscal de Ciberdelincuencia): <a href="https://www.mpf.gob.ar/ufeci/" target="_blank" style="color:var(--yellow)">mpf.gob.ar/ufeci</a> — Tel: (011) 5071-0040 / Email: denunciasufeci@mpf.gov.ar</li>
-        <li>Defensa del Consumidor: <strong style="color:var(--yellow)">0800-666-1518</strong> / TINA WhatsApp: <strong style="color:var(--yellow)">+54 11 3910-1010</strong> — <a href="https://www.argentina.gob.ar/defensadelconsumidor" target="_blank" style="color:var(--yellow)">argentina.gob.ar/defensadelconsumidor</a></li>
-        <li>BCRA (fraudes financieros con bancos o tarjetas): <a href="https://www.bcra.gob.ar/realizar-un-reclamo-ante-el-banco-central-por-fraude-o-estafa/" target="_blank" style="color:var(--yellow)">bcra.gob.ar/reclamos</a></li>
+        <li>UFECI (Unidad Fiscal de Ciberdelincuencia): <a href="https://ufeci.mpf.gob.ar" target="_blank" style="color:var(--yellow)">ufeci.mpf.gob.ar</a></li>
+        <li>Defensa del Consumidor: 0800 333 3339</li>
       </ul>
     </div>
     <div class="highlight-box">
       <p><strong>Denunciar aunque no recuperes el dinero importa.</strong> Cada denuncia ayuda a identificar patrones y proteger a la próxima persona.</p>
     </div>
-    <a class="quiz-btn" href="https://forms.gle/RFoBsYF6ebevoY8W9" target="_blank">PONETE A PRUEBA — MÓDULO 4 →</a>
+    <a class="quiz-btn" href="https://forms.gle/RFoBsYF6ebevoY8W9" target="_blank">IR AL QUIZ DEL MÓDULO 4 →</a>
     <a class="quiz-btn" href="#" onclick="showPage('m5');return false" style="background:var(--bg2);border:1px solid var(--border);margin-top:0.75rem;color:var(--white)">SIGUIENTE: MÓDULO 5 — VERIFICÁ ANTES DE CONFIAR →</a>
   </div>
 </div>
@@ -789,13 +442,7 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
         </a>
       </div>
     </div>
-    <div style="max-width:360px;margin:1.5rem auto">
-      <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border:1px solid var(--border)">
-        <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/qfr2AWgegt4" title="Cómo usar VirusTotal para verificar archivos y links" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <p class="content-img-caption" style="text-align:center">En 60 segundos: cómo analizar cualquier archivo o link sospechoso antes de abrirlo.</p>
-    </div>
-        <div class="content-block">
+    <div class="content-block">
       <h3>¿Este sitio es confiable?</h3>
       <div class="tool-grid">
         <a class="tool-card" href="https://www.scamadviser.com" target="_blank">
@@ -813,7 +460,7 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
     <div class="highlight-box">
       <p><strong>Ante la duda, verificá primero.</strong> Pegar un link en VirusTotal lleva 10 segundos. Recuperarse de una estafa puede llevar meses.</p>
     </div>
-    <a class="quiz-btn" href="https://forms.gle/98J1CasgzH5JGN2U9" target="_blank">PONETE A PRUEBA — MÓDULO 5 →</a>
+    <a class="quiz-btn" href="https://forms.gle/98J1CasgzH5JGN2U9" target="_blank">IR AL QUIZ DEL MÓDULO 5 →</a>
     <a class="quiz-btn" href="#" onclick="showPage('m6');return false" style="background:var(--bg2);border:1px solid var(--border);margin-top:0.75rem;color:var(--white)">SIGUIENTE: MÓDULO 6 — YA SABÉS DEFENDERTE →</a>
   </div>
 </div>
@@ -830,7 +477,7 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
     <div class="section-title" style="margin-bottom:1.5rem">10 REGLAS PARA NO CAER</div>
     <img class="content-img" src="imagenes/golden-rules.png" alt="10 reglas para no caer en estafas online">
     <div class="section-label" style="margin-top:2rem;margin-bottom:0.4rem">Repasá</div>
-    <div class="section-title" style="margin-bottom:1rem">EJERCICIOS — COMPROBÁ LO QUE APRENDISTE</div>
+    <div class="section-title" style="margin-bottom:1rem">LOS 5 QUIZZES</div>
     <div class="cierre-quiz-grid">
       <a class="quiz-mini-btn" href="https://forms.gle/MjqYyfGACVu3nU3v6" target="_blank"><span>01</span>¿Por qué yo?</a>
       <a class="quiz-mini-btn" href="https://forms.gle/Dwoj8ssftYbjxN8n8" target="_blank"><span>02</span>Mensajes falsos</a>
@@ -838,88 +485,14 @@ body.modo-accesible [style*="font-size:1rem"] { font-size:1.15rem !important; li
       <a class="quiz-mini-btn" href="https://forms.gle/RFoBsYF6ebevoY8W9" target="_blank"><span>04</span>Caíste</a>
       <a class="quiz-mini-btn" href="https://forms.gle/98J1CasgzH5JGN2U9" target="_blank"><span>05</span>Verificá</a>
     </div>
-    <div class="section-label" style="margin-top:2rem;margin-bottom:0.4rem">Para seguir practicando</div>
-    <div class="section-title" style="margin-bottom:1rem">RECURSOS EXTERNOS GRATUITOS</div>
-    <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem">
-
-      <a href="https://estafaliens.uy/" target="_blank" style="background:var(--bg2);border:1px solid var(--border);padding:1.25rem;text-decoration:none;display:block;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(255,75,43,0.5)'" onmouseout="this.style.borderColor='rgba(255,75,43,0.15)'">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">🎮 Invasión de los Estafaliens</div>
-        <div style="font-size:0.9rem;color:var(--yellow);margin-bottom:0.4rem">estafaliens.uy</div>
-        <div style="font-size:0.9rem;color:var(--gray);line-height:1.6">Juego interactivo con más de 200 casos reales de phishing, urgencia y suplantación. Desarrollado por una universidad uruguaya con supervisión de especialistas en ciberseguridad. Gratis, funciona en celular.</div>
-      </a>
-
-      <a href="https://phishingquiz.withgoogle.com/" target="_blank" style="background:var(--bg2);border:1px solid var(--border);padding:1.25rem;text-decoration:none;display:block;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(255,75,43,0.5)'" onmouseout="this.style.borderColor='rgba(255,75,43,0.15)'">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">🎣 Quiz de Phishing de Google</div>
-        <div style="font-size:0.9rem;color:var(--yellow);margin-bottom:0.4rem">phishingquiz.withgoogle.com</div>
-        <div style="font-size:0.9rem;color:var(--gray);line-height:1.6">8 casos reales de emails y mensajes — decidís si cada uno es legítimo o phishing. Breve, en español y muy directo.</div>
-      </a>
-
-    </div>
     <div class="section-label" style="margin-top:2rem;margin-bottom:0.4rem">Compartí</div>
     <div class="section-title" style="margin-bottom:1rem">MANDÁSELO A ALGUIEN</div>
-    <a class="share-btn" href="https://wa.me/?text=Te%20comparto%20este%20curso%20gratuito%20para%20aprender%20a%20identificar%20estafas%20online%3A%20https%3A%2F%2Fwww.notepesquen.com.ar" target="_blank">📲 COMPARTIR POR WHATSAPP</a>
+    <a class="share-btn" href="https://wa.me/?text=Te%20comparto%20este%20curso%20gratuito%20para%20aprender%20a%20identificar%20estafas%20online%3A%20https%3A%2F%2Fnotepesquen.github.io%2Fno-te-pesquen" target="_blank">📲 COMPARTIR POR WHATSAPP</a>
     <p class="download-note">Si esto te fue útil, mandáselo a alguien que lo necesite. Puede marcar la diferencia.</p>
-    </div>
-</div>
-
-
-<!-- GLOSARIO -->
-<div id="page-glosario" style="display:none">
-</div>
-
-<div style="background:var(--bg2);border-top:1px solid var(--border);padding:2rem 1.5rem;max-width:800px;margin:0 auto">
-  <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:0.5rem 0" onclick="toggleGlosario()">
-    <div>
-      <div style="font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:0.25rem">Diccionario</div>
-      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:2px;color:var(--white)">GLOSARIO — EN CRIOLLO</div>
-    </div>
-    <div id="glosario-icon" style="font-size:1.5rem;color:var(--red);transition:transform 0.3s;font-weight:700">＋</div>
-  </div>
-  <div id="glosario-body" style="display:none;margin-top:1rem">
-    <p style="font-size:0.9rem;color:var(--gray);margin-bottom:1.25rem;line-height:1.6">Palabras que aparecen en el curso, explicadas sin vueltas.</p>
-    <div style="display:flex;flex-direction:column;gap:0.75rem">
-
-      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Phishing</div>
-        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Mensaje trucho — por mail, SMS o WhatsApp — que intenta robarte datos haciéndose pasar por una empresa o persona de confianza.</div>
-      </div>
-
-      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">URL / Link</div>
-        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">La dirección de una página web. Por ejemplo: <span style="color:var(--yellow);font-weight:600">anses.gob.ar</span> es la URL oficial de ANSES.</div>
-      </div>
-
-      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Dominio</div>
-        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">La parte más importante de una URL. En <span style="color:var(--yellow);font-weight:600">www.anses.gob.ar/turnos</span>, lo que importa es <span style="color:var(--yellow);font-weight:600">anses.gob.ar</span>. Si esa parte es rara o distinta, el sitio puede ser falso.</div>
-      </div>
-
-      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Remitente</div>
-        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Quién supuestamente mandó el mensaje. En un mail, es la dirección que aparece en el campo "De:" — y puede ser falsa aunque parezca real.</div>
-      </div>
-
-      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Patrocinado</div>
-        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Resultado pago en Google. Aparece primero porque alguien pagó para estar ahí — puede ser legítimo o una trampa. No confíes solo porque aparece primero.</div>
-      </div>
-
-      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Código de verificación</div>
-        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Número que llega por SMS o WhatsApp para confirmar que sos vos. <strong style="color:var(--white)">Nunca se comparte con nadie</strong>, ni con quien diga ser del banco, de WhatsApp o de cualquier empresa.</div>
-      </div>
-
-      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Filtración de datos</div>
-        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Cuando los datos de muchas personas (mails, contraseñas, números) quedaron expuestos en internet por un hackeo a alguna empresa o servicio que usabas.</div>
-      </div>
-
-      <div style="background:var(--bg3);border:1px solid rgba(255,255,255,0.05);border-left:3px solid var(--red);padding:1rem 1.25rem">
-        <div style="font-weight:700;color:var(--white);font-size:1rem;margin-bottom:0.25rem">Verificación en dos pasos</div>
-        <div style="font-size:0.95rem;color:var(--gray);line-height:1.6">Una segunda llave para entrar a tu cuenta. Además de la contraseña, el sistema te pide confirmar tu identidad con un código al celular. Hace mucho más difícil que alguien entre aunque tenga tu contraseña.</div>
-      </div>
-
-    </div>
+    <div class="section-label" style="margin-top:2rem;margin-bottom:0.4rem">Tu guía</div>
+    <div class="section-title" style="margin-bottom:1rem">GUARDALA EN EL CELULAR</div>
+    <img class="content-img" src="imagenes/infografia-contactos.png" alt="Guía rápida de contactos oficiales">
+    <p class="content-img-caption">Guardá esta imagen en tu celular. Antes de llamar a cualquier empresa o al estado, consultala.</p>
   </div>
 </div>
 
@@ -940,44 +513,6 @@ function toggleMenu(){
 function closeMenu(){
   document.getElementById('nav-links').classList.remove('open');
 }
-
-
-function toggleAccesibilidad() {
-  var body = document.body;
-  var btn = document.getElementById('btn-accesibilidad');
-  if (body.classList.contains('modo-accesible')) {
-    body.classList.remove('modo-accesible');
-    btn.textContent = '𝐀+ Letra grande';
-    localStorage.setItem('accesibilidad', 'off');
-  } else {
-    body.classList.add('modo-accesible');
-    btn.textContent = '𝐀− Letra normal';
-    localStorage.setItem('accesibilidad', 'on');
-  }
-}
-
-// Recordar preferencia entre páginas/visitas
-if (localStorage.getItem('accesibilidad') === 'on') {
-  document.body.classList.add('modo-accesible');
-  document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.getElementById('btn-accesibilidad');
-    if (btn) btn.textContent = '𝐀− Letra normal';
-  });
-}
-
-function toggleGlosario() {
-  var body = document.getElementById('glosario-body');
-  var icon = document.getElementById('glosario-icon');
-  if (body.style.display === 'none') {
-    body.style.display = 'block';
-    icon.textContent = '－';
-    icon.style.transform = 'rotate(0deg)';
-  } else {
-    body.style.display = 'none';
-    icon.textContent = '＋';
-  }
-}
-
 </script>
 </body>
 </html>
